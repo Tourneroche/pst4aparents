@@ -1,0 +1,63 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Mes réservations</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <h3>Réservez votre Babysitting</h3>
+  
+    
+
+      <h2> Choissisez votre date </h2>
+
+      <ion-item>
+        <ion-label>Quel jour?</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="myDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>A partir de quelle heure ?</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeStarts"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Jusqu'à quelle heure ?</ion-label>
+        <ion-datetime displayFormat="h:mm A" pickerFormat="h mm A" [(ngModel)]="event.timeFinish"></ion-datetime>
+      </ion-item>
+
+      <h2> Compétence(s) de la Babysitter </h2>
+
+      <ion-list>
+
+        <ion-item>
+          <ion-label>Anglais</ion-label>
+          <ion-checkbox [(ngModel)]="anglais"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Origami</ion-label>
+          <ion-checkbox [(ngModel)]="origami" disabled="true"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label>Guitare</ion-label>
+          <ion-checkbox [(ngModel)]="guitare"></ion-checkbox>
+        </ion-item>
+      
+        <ion-item>
+            <ion-label>Chant</ion-label>
+            <ion-checkbox [(ngModel)]="chant"></ion-checkbox>
+          </ion-item>
+        
+      </ion-list>
+   
+    <ion-img center src="assets/imgs/logo.png"></ion-img>
+    
+  
+  </ion-content>
+
+  
